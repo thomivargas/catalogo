@@ -1,45 +1,63 @@
-import fiona from './assets/productos/fiona.jpg'
-import sol from './assets/productos/sol.jpg'
-import vivi from './assets/productos/vivi.jpg'
-import aylu from './assets/productos/aylu.jpg'
-import paula from './assets/productos/paula.jpg'
-import tiara from './assets/productos/tiara.jpg'
+import pantalon_1 from './assets/Productos/Compra_1/4.webp'
+import pantalon_2 from './assets/Productos/Compra_1/5.webp'
+import pantalon_3 from './assets/Productos/Compra_1/6.webp'
+import pantalon_4 from './assets/Productos/Compra_1/7.webp'
+import remera_1 from './assets/Productos/Compra_1/1.webp'
+import remera_2 from './assets/Productos/Compra_1/2.webp'
+import remera_3 from './assets/Productos/Compra_1/3.webp'
+import camisetas from './assets/Productos/Compra_1/10.webp';
+import buzos from './assets/Productos/Compra_1/9.webp'
+import buzo from './assets/Productos/Compra_1/8.webp'
+
 
 export const data = [
     {
-        nombre: 'Fiona',
-        precio: '$40.000',
-        Talles: ['36', '40'],
-        img: fiona
+        nombre: 'Wide Leg Celeste',
+        img: pantalon_1
     },
     {
-        nombre: 'Sol',
-        precio: '$40.000',
-        Talles: ['36', '38', '40'],
-        img: sol
+        nombre: 'Wide Leg Gris Tiro Medio',
+        img: pantalon_4
     },
     {
-        nombre: 'Vivi',
-        precio: '$40.000',
-        Talles: ['36', '38', '40'],
-        img: vivi
+        nombre: 'Wide Leg Negro',
+        img: pantalon_2
     },
     {
-        nombre: 'Aylu',
-        precio: '$40.000',
-        Talles: ['38', '40', '42'],
-        img: aylu
+        nombre: 'Wide Leg Gris Tiro Bajo',
+        img: pantalon_3
+    },
+];
+
+export const data_Remeras = [
+    {
+        nombre: 'Remera Tee Princeless',
+        img: remera_2
     },
     {
-        nombre: 'Paula',
-        precio: '$40.000',
-        Talles: ['38', '40'],
-        img: paula
+        nombre: 'Remera Martini Cereza ',
+        img: remera_3
     },
     {
-        nombre: 'Tiara',
-        precio: '$40.000',
-        Talles: ['36', '38', '40'],
-        img: tiara
+        nombre: 'Remera Cowboy Essentials',
+        img: remera_1
     },
+];
+
+export const data_Camisetas = [
+    {
+        nombre: 'CAMISETA MEDIA POLERA',
+        img: camisetas
+    }
+];
+
+export const data_Buzos = [
+    {
+        nombre: 'BUZO CON CIERRE',
+        img: buzos
+    },
+    {
+        nombre: 'BUZO CON CIERRE',
+        img: buzo
+    }
 ];

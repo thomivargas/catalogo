@@ -2,10 +2,13 @@ import wsp from './assets/logo_wsp.svg'
 import ig from './assets/logo_ig.svg'
 import fondo_home from './assets/fondo_home.jpg'
 import { useState } from 'react'
-import { data } from './data'
+import { data, data_Buzos, data_Camisetas, data_Remeras } from './data'
 
 function App() {
-  const [pantalones, setPantalones] = useState(data)
+  const [pantalones, setPantalones] = useState(data);
+  const [remeras, setRemeras] = useState(data_Remeras);
+  const [camisetas, setCamisetas] = useState(data_Camisetas);
+  const [buzos, setBuzos] = useState(data_Buzos)
 
   return (
     <>
@@ -32,21 +35,118 @@ function App() {
           </a>
         </div>
       </div>
-      {/* catálogo */}
-      <div className="py-10 px-10 grid gap-8 md:grid-cols-4">
-        {pantalones.map((p, index) => (
-          <div key={index} className="rounded-2xl overflow-hidden">
-            <img src={p.img} alt={p.nombre} className="w-full md:h-[600px]" />
-            <div className="p-4 flex flex-col rounded-b-2xl gap-4 border-r border-b border-l border-white">
-              <div className='flex justify-between items-center'>
-                <h2 className="text-2xl font-semibold uppercase tracking-widest text-white">{p.nombre}</h2>
-                <p className="font-bold text-2xl">{p.precio}</p>
+      {/* catálogo remeras */}
+      <div className="py-10 px-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <h1 className='text-center text-2xl uppercase'>REMERAS</h1>
+        {remeras.map((p, index) => (
+          <div
+            key={index}
+            className="bg-white backdrop-blur-lg rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src={p.img}
+              alt={p.nombre}
+              className="w-full h-96 object-cover"
+            />
+            <div className="p-4 flex flex-col gap-3">
+              <div className="flex justify-between items-center">
+                <h2 className="text-lg font-bold uppercase tracking-wide">{p.nombre}</h2>
+                {/* <p className="text-xl font-semibold">{p.precio}</p> */}
               </div>
-              <div className='flex gap-5 justify-end'>{p.Talles.map((talle, index) => (
-                <div key={index} className='p-2 border border-white rounded-full'>
-                  <span>{talle}</span>
-                </div>
-              ))}</div>
+              {/* <div className="flex flex-wrap gap-2">
+                {p.Talles.map((talle, index) => (
+                  <div key={index} className="px-3 py-1 border border-white rounded-full text-sm">
+                    {talle}
+                  </div>
+                ))}
+              </div> */}
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* catálogo camisetas */}
+      <div className="py-10 px-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <h1 className='text-center text-2xl uppercase'>CAMISETAS</h1>
+        {camisetas.map((p, index) => (
+          <div
+            key={index}
+            className="bg-white backdrop-blur-lg rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src={p.img}
+              alt={p.nombre}
+              className="w-full h-96 object-cover"
+            />
+            <div className="p-4 flex flex-col gap-3">
+              <div className="flex justify-between items-center">
+                <h2 className="text-lg font-bold uppercase tracking-wide">{p.nombre}</h2>
+                {/* <p className="text-xl font-semibold">{p.precio}</p> */}
+              </div>
+              {/* <div className="flex flex-wrap gap-2">
+                {p.Talles.map((talle, index) => (
+                  <div key={index} className="px-3 py-1 border border-white rounded-full text-sm">
+                    {talle}
+                  </div>
+                ))}
+              </div> */}
+            </div>
+          </div>
+        ))}
+      </div>    
+      {/* catálogo buzos */}
+      <div className="py-10 px-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <h1 className='text-center text-2xl uppercase'>Buzos</h1>
+        {buzos.map((p, index) => (
+          <div
+            key={index}
+            className="bg-white backdrop-blur-lg rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src={p.img}
+              alt={p.nombre}
+              className="w-full h-96 object-cover"
+            />
+            <div className="p-4 flex flex-col gap-3">
+              <div className="flex justify-between items-center">
+                <h2 className="text-lg font-bold uppercase tracking-wide">{p.nombre}</h2>
+                {/* <p className="text-xl font-semibold">{p.precio}</p> */}
+              </div>
+              {/* <div className="flex flex-wrap gap-2">
+                {p.Talles.map((talle, index) => (
+                  <div key={index} className="px-3 py-1 border border-white rounded-full text-sm">
+                    {talle}
+                  </div>
+                ))}
+              </div> */}
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* catálogo pantalones */}
+      <div className="py-10 px-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <h1 className='text-center text-2xl uppercase'>PANTALONES</h1>
+        {pantalones.map((p, index) => (
+          <div
+            key={index}
+            className="bg-white backdrop-blur-lg rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src={p.img}
+              alt={p.nombre}
+              className="w-full h-96 object-cover"
+            />
+            <div className="p-4 flex flex-col gap-3">
+              <div className="flex justify-between items-center">
+                <h2 className="text-lg font-bold uppercase tracking-wide">{p.nombre}</h2>
+                {/* <p className="text-xl font-semibold">{p.precio}</p> */}
+              </div>
+              {/* <div className="flex flex-wrap gap-2">
+                {p.Talles.map((talle, index) => (
+                  <div key={index} className="px-3 py-1 border border-white rounded-full text-sm">
+                    {talle}
+                  </div>
+                ))}
+              </div> */}
             </div>
           </div>
         ))}
