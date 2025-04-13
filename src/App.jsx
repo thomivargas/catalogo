@@ -11,7 +11,7 @@ function App() {
     <>
       {/* home */}
       <div
-        className="h-[95vh] flex flex-col justify-between relative bg-cover bg-center"
+        className="h-[95vh] md:h-[45vh] flex flex-col justify-between relative bg-cover bg-center"
         style={{ backgroundImage: `url(${fondo_home})` }}
       >
         {/* Capa oscura encima */}
@@ -25,28 +25,34 @@ function App() {
             href="https://wa.me/543804712931"
             target="_blank"
             rel="noopener noreferrer"
-            className="mb-5 pl-5 text-sm underline tracking-widest flex items-center gap-2 text-white"
+            className="mb-5 pl-5 text-sm underline flex items-center gap-2 text-white"
           >
             <img src={wsp} width={22} className="" />
-            <span>3804712931</span>
+            <span className='tracking-widest'>3804712931</span>
           </a>
         </div>
       </div>
       {/* catálogo */}
-      <div className="bg-white py-6 px-4 grid gap-6">
+      <div className="py-10 px-10 grid gap-8 md:grid-cols-4">
         {pantalones.map((p, index) => (
-          <div key={index} className="rounded-2xl shadow-xl overflow-hidden">
-            <img src={p.img} alt={p.nombre} className="w-full object-cover" />
-            <div className="p-4">
-              <h2 className="text-lg font-semibold text-gray-700">{p.nombre}</h2>
-              <p className="text-gray-500">talles: {p.Talles}</p>
-              <p className="text-pink-600 font-bold mt-2">{p.precio}</p>
+          <div key={index} className="rounded-2xl overflow-hidden">
+            <img src={p.img} alt={p.nombre} className="w-full md:h-[600px]" />
+            <div className="p-4 flex flex-col rounded-b-2xl gap-4 border-r border-b border-l border-white">
+              <div className='flex justify-between items-center'>
+                <h2 className="text-2xl font-semibold uppercase tracking-widest text-white">{p.nombre}</h2>
+                <p className="font-bold text-2xl">{p.precio}</p>
+              </div>
+              <div className='flex gap-5 justify-end'>{p.Talles.map((talle, index) => (
+                <div key={index} className='p-2 border border-white rounded-full'>
+                  <span>{talle}</span>
+                </div>
+              ))}</div>
             </div>
           </div>
         ))}
       </div>
       {/* footer */}
-      <footer className="bg-gray-100 py-6 px-4 text-center text-sm text-gray-700 md:hidden">
+      <footer className="bg-gray-100 py-6 px-4 text-center text-sm text-gray-700">
         <div className="flex justify-center gap-6 items-center mb-2">
           {/* Instagram */}
           <a
