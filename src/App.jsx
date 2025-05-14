@@ -48,10 +48,13 @@ function App() {
               alt={p.nombre}
               className="w-full h-96 object-cover"
             />
-            <div className="p-4 flex flex-col gap-3">
-              <div className="flex justify-between items-center">
+            <div className="p-4">
+              <div className="">
                 <h2 className="text-lg font-bold uppercase tracking-wide">{p.nombre}</h2>
-                {/* <p className="text-xl font-semibold">{p.precio}</p> */}
+                <div className='flex gap-2 mt-5'>
+                  <p className="text-lg bg-red-500 text-white px-2 font-semibold">{p.precioHot}</p>
+                  <p className="text-sm line-through text-gray-800">{p.precio}</p>
+                </div>
               </div>
               {/* <div className="flex flex-wrap gap-2">
                 {p.Talles.map((talle, index) => (
@@ -78,9 +81,12 @@ function App() {
               className="w-full h-96 object-cover"
             />
             <div className="p-4 flex flex-col gap-3">
-              <div className="flex justify-between items-center">
+              <div className="">
                 <h2 className="text-lg font-bold uppercase tracking-wide">{p.nombre}</h2>
-                {/* <p className="text-xl font-semibold">{p.precio}</p> */}
+                <div className='flex gap-2 mt-5'>
+                  <p className="text-lg bg-red-500 text-white px-2 font-semibold">{p.precioHot}</p>
+                  <p className="text-sm line-through text-gray-800">{p.precio}</p>
+                </div>
               </div>
               {/* <div className="flex flex-wrap gap-2">
                 {p.Talles.map((talle, index) => (
@@ -107,9 +113,12 @@ function App() {
               className="w-full h-96 object-cover"
             />
             <div className="p-4 flex flex-col gap-3">
-              <div className="flex justify-between items-center">
+              <div className="">
                 <h2 className="text-lg font-bold uppercase tracking-wide">{p.nombre}</h2>
-                {/* <p className="text-xl font-semibold">{p.precio}</p> */}
+                <div className='flex gap-2 mt-5'>
+                  <p className="text-lg bg-red-500 text-white px-2 font-semibold">{p.precioHot}</p>
+                  <p className="text-sm line-through text-gray-800">{p.precio}</p>
+                </div>
               </div>
               {/* <div className="flex flex-wrap gap-2">
                 {p.Talles.map((talle, index) => (
@@ -136,9 +145,12 @@ function App() {
               className="w-full h-96 object-cover"
             />
             <div className="p-4 flex flex-col gap-3">
-              <div className="flex justify-between items-center">
+              <div className="">
                 <h2 className="text-lg font-bold uppercase tracking-wide">{p.nombre}</h2>
-                {/* <p className="text-xl font-semibold">{p.precio}</p> */}
+                <div className='flex gap-2 mt-5'>
+                  <p className="text-lg bg-red-500 text-white px-2 font-semibold">{p.precioHot}</p>
+                  <p className="text-sm line-through text-gray-800">{p.precio}</p>
+                </div>
               </div>
               {/* <div className="flex flex-wrap gap-2">
                 {p.Talles.map((talle, index) => (
