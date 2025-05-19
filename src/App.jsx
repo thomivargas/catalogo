@@ -20,7 +20,6 @@ function App() {
         {/* Capa oscura encima */}
         <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-        /* Contenido encima de la capa oscura */
           <div className="relative z-10 h-full flex flex-col justify-between">
             <p className="text-right pt-5 pr-5 uppercase text-white">Vaire</p>
             <h1 className="text-center text-5xl uppercase text-white">Catálogo</h1>
