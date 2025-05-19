@@ -12,14 +12,14 @@ import buzo from './assets/Productos/Compra_1/8.webp'
 export const data_Remeras = [
     {
         nombre: 'Remera Tee Princeless',
-        precio: '$11.000',
-        precioHot: '$8.250', // 25% discount
+        precio: '$10.000',
+        precioHot: null, // 25% discount
         img: remera_2
     },
     {
         nombre: 'Remera Cowboy',
-        precio: '$11.000',
-        precioHot: '$8.250', // 25% discount
+        precio: '$10.000',
+        precioHot: null, // 25% discount
         img: remera_1
     },
 ];
@@ -29,25 +29,25 @@ export const data = [
     {
         nombre: 'Wide Leg Celeste',
         precio: '$55.000',
-        precioHot: '$41.250', // 25% discount
+        precioHot: null, // 25% discount
         img: pantalon_1
     },
     {
         nombre: 'Wide Leg Gris Tiro Medio',
         precio: '$60.000',
-        precioHot: '$45.000', // 25% discount
+        precioHot: null, // 25% discount
         img: pantalon_4
     },
     {
         nombre: 'Wide Leg Negro',
         precio: '$45.000',
-        precioHot: '$33.750', // 25% discount
+        //precioHot: '$33.750', // 25% discount
         img: pantalon_2
     },
     {
         nombre: 'Wide Leg Gris Tiro Bajo',
         precio: '$60.000',
-        precioHot: '$45.000', // 25% discount
+        precioHot: null, // 25% discount
         img: pantalon_3
     },
 ];
@@ -56,7 +56,7 @@ export const data_Camisetas = [
     {
         nombre: 'CAMISETA MEDIA POLERA',
         precio: '$7.500',
-        precioHot: '$5.625', // 25% discount
+        precioHot: null, // 25% discount
         img: camisetas
     }
 ];
